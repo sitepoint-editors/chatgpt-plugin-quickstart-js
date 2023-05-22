@@ -1,7 +1,7 @@
 # ChatGPT JS Plugin Quickstart
 __Brought to you by SitePoint__
 
-Get a todo list ChatGPT plugin up and running in under 5 minutes using Node and Express. Tutorial located here: [Build your first JavaScript ChatGPT Plugin](https://www.sitepoint.com/javascript-chatgpt-plugin).
+Get a todo list ChatGPT plugin up and running in under 5 minutes using Node and Express. Tutorial located here: [Build your first JavaScript ChatGPT Plugin](https://www.sitepoint.com/javascript-chatgpt-plugin/).
 
 ## Setup
 
