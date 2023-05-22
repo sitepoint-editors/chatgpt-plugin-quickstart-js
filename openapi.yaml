@@ -1,0 +1,63 @@
+openapi: 3.0.1
+info:
+  title: TODO Plugin
+  description: A plugin that allows the user to create and manage a To Do list using ChatGPT.
+  version: 'v1'
+servers:
+  - url: http://localhost:3000
+paths:
+  /todos:
+    get:
+      operationId: getTodos
+      summary: Get the list of todos
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
+    post:
+      operationId: addTodo
+      summary: Add a todo to the list
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+  /todos/{id}:
+    delete:
+      operationId: removeTodo
+      summary: Delete a todo from the list when it is complete, or no longer required.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: No Content
+components:
+  schemas:
+    Todo:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        task:
+          type: string
+      required:
+        - id
+        - task

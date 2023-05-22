@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "My ChatGPT To Do Plugin",
+    "name_for_model": "todo",
+    "description_for_human": "Plugin for managing a To Do list. You can add, remove and view your To Dos.",
+    "description_for_model": "Plugin for managing a To Do list. You can add, remove and view your To Dos.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:3000/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:3000/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "http://www.youromain.com/legal"
+}
