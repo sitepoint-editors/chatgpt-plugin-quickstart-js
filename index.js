@@ -22,7 +22,7 @@ app.use(openaiRoutes);
 // The dummy todos API
 app.use('/todos', todosRouter);
 
-// Proxy server to another API outside of localhost:3000
+// Proxy to an existing API
 const api_url = 'http://localhost';
 
 app.all('/:path', async (req, res) => {
